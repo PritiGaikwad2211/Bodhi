@@ -1,0 +1,369 @@
+{% extends 'layout/welayout.html' %}
+{% load static %}
+<title>{% block title %}
+  
+  hello {{text}}
+
+{% endblock %}</title>
+
+
+{% block content %}
+
+
+  <!--Carousel Section Start -->
+  
+  <div class="home-slider owl-carousel js-fullheight">
+    {% for x in car %}
+    <div class="slider-item js-fullheight" style="background-image:url({{x.Img.url}});">
+     <div class="overlay"></div>
+       <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-12 ftco-animate">
+            <div class="text w-100 text-center" data-aos="zoom-in" data-aos-delay="100" >
+              <!-- <h2 style=" font-size: 250%;color:whitesmoke"><b>Vocational Training &amp;Internship</b></h2> -->
+              <div class="direction">
+              <h2 style=" font-size: 250%;color:whitesmoke;">{{x.Heading}}</b></h2>
+              <h3>{{x.Description}}</h3>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    </div>
+   {% endfor %}
+
+
+
+  <!-- <div class="slider-item js-fullheight" style="background-image:url({{x.Img.url}}); ">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-12 ftco-animate">
+            <div class="text w-100 text-center" data-aos="zoom-in" data-aos-delay="100">
+              <div class="direction">
+              <h2 style=" font-size: 250%;color:whitesmoke;"> {{x.Heading}}</b></h2>
+              <h3>{{x.Description}}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="slider-item js-fullheight" style="background-image:url({{x.Img.url}});">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-12 ftco-animate">
+            <div class="text w-100 text-center" data-aos="zoom-in" data-aos-delay="100">
+              <div class="direction">
+              <h2 style=" font-size: 250%;color:whitesmoke"> {{x.Heading}}</b></h2>
+              <h3> {{x.Description}}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="slider-item js-fullheight" style="background-image:url({{x.Img.url}}); ">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-12 ftco-animate">
+            <div class="text w-100 text-center" data-aos="zoom-in" data-aos-delay="100">
+              <div class="direction">
+              <h2 style=" font-size: 250%;color:whitesmoke">{{x.Heading}}</b></h2>
+              <h3> {{x.Description}}  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  
+-->
+
+  <!--Carousel Section End -->
+
+  
+  <br>
+
+
+   <main id="main">
+
+   
+<!-- start service Section -->
+
+<div class="container">
+  <div class="row">
+
+    
+    <h1  style="text-align: center; color: #00ca54;font-size: 200%; font-family:' Poppins;'"><b>{{text2}}</b></h1>
+    {% for x in sec %}
+      <div class="col-md-4 col-sm-6">
+          <div class="serviceBox green">
+              
+
+               <img src={{x.gif.url}} alt="">
+              
+              <h3 class="title">{{x.Title}}</h3>
+              <p class="description">
+                {{x.content}}  
+              </p>
+          </div>
+      </div>
+      {% endfor %}
+  
+    
+       <!--
+      <div class="col-md-4 col-sm-6">
+          <div class="serviceBox green">
+            <img src={{x.gif.url}} alt="">
+            
+              <h3 class="title">{{x.Title}}</h3>
+              <p class="description">
+                {{x.content}}
+              </p>
+          </div>
+      </div>
+      
+    
+    
+ 
+      <div class="col-md-4 col-sm-6">
+        <div class="serviceBox green">
+            <img src={{x.gif.url}} alt="">
+            
+            <h3 class="title">{{x.Title}}</h3>
+            <p class="description">
+              {{x.content}}
+            </p>
+        </div>
+    </div>
+    
+
+   
+    <div class="col-md-4 col-sm-6">
+      <div class="serviceBox green">
+          <img src={{x.gif.url}} alt="">
+          <h3 class="title">{{x.Title}}</h3>
+          <p class="description">
+            {{x.content}}
+            
+          </p>
+      </div>
+  </div>
+  
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="serviceBox green">
+          <img src={{x.gif.url}} alt="">
+          
+          <h3 class="title">{{x.Title}}</h3>
+          <p class="description">
+            {{x.content}}
+          </p>
+      </div>
+  </div>
+
+
+  
+
+
+
+<div class="col-md-4 col-sm-6">
+  <div class="serviceBox green">
+      <img src={{x.gif.url}} alt="">
+      <h3 class="title">{{x.Title}}</h3>
+      <p class="description">
+        {{x.content}}
+      </p>
+  </div>
+</div>
+
+  
+</div>
+-->
+
+
+  <!-- end service Section -->
+
+
+<!-- start_clients -->
+<section>
+     
+  <div class="container">
+    <div class="row">
+        
+          <div class="form-horizontal"> <h1 class="text-center pt-5 pb-5" style="color: #5fcf80;" > <b>{{text3}}</b> </h1> 
+            <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css /> -->
+             
+            <div class="container">
+                <div class="row">
+                {% for x in cli %}  
+                <div class="col-md-3 col-sm-6">
+                  <a href="https://www.gmceh.co.in" target="blank">
+                    <div class="counter">
+                         <div class="counter-content">
+
+                               <img src={{x.img.url}} alt="">
+
+                         </div>
+                    </div> 
+                   </a>
+                </div>
+                {% endfor %}
+              </div>
+              </div>
+                
+               <!--
+                <div class="col-md-3 col-sm-6">
+                    <a href="https://infominds-e0eda.web.app" target="blank">
+                  <div class="counter">
+                    <div class="counter-content">
+
+                      <img src={{x.img.url}} alt="">
+                      
+                    </div>
+                  </div>  </a>
+                </div>
+                
+
+                <div class="col-md-3 col-sm-6">
+                    <a href="https://www.loksevavidyamandir.in" target="blank">
+                  <div class="counter yellow">
+                    <div class="counter-content">
+                      <img src={{x.img.url}} alt="">
+                      
+                    </div>
+                  </div>  </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <a href="https://ssagrofoodind.web.app" target="blank">
+                  <div class="counter blue">
+                    <div class="counter-content">
+                      <img src={{x.img.url}} alt="">
+                      
+                    </div>
+                  </div>  </a>
+                </div>
+               
+
+        <!-- 2nd_start -->
+      
+
+                <!--
+                <div class="col-md-3 col-sm-6">
+                  <a href="https://www.gmceh.co.in" target="blank">
+                  <div class="counter">
+                    <div class="counter-content">
+
+                      <img src={{x.img5.url}} alt="">
+
+                    </div>
+                  </div>  </a>
+              </div>
+             
+              <div class="col-md-3 col-sm-6">
+                  <a href="https://infominds-e0eda.web.app" target="blank">
+                <div class="counter purple">
+                  <div class="counter-content">
+
+                    <img src={{x.img6.url}} alt="">
+                    
+                  </div>
+                </div>  </a>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                  <a href="https://www.loksevavidyamandir.in" target="blank">
+                <div class="counter yellow">
+                  <div class="counter-content">
+                    <img src={{x.img7.url}} alt="">
+                    
+                  </div>
+                </div>  </a>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                  <a href="https://ssagrofoodind.web.app" target="blank">
+                <div class="counter blue">
+                  <div class="counter-content">
+                    <img src={{x.img8.url}} alt="">
+                    
+                  </div>
+                </div>  </a>
+              </div>
+              
+
+
+              
+
+
+              </div>
+            </div>
+            </div>
+        </div>
+    </div>
+  
+
+
+
+</section>
+-->
+
+<!-- end_clients -->
+
+
+
+
+ <!--======= About Section ======= -->
+ <section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row">
+      {% for x in abo %}
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+        <img src={{x.img.url}} class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+        <h2 style="color:#00ca54"><b>{{text4}}</b></h2>
+        <p >
+         
+          <p>
+         
+        </p>
+        </p>
+       
+        <ul>
+          <li><i class="bi bi-check-circle"></i>{{x.content}}</li>
+          <li><i class="bi bi-check-circle"></i>{{x.content}}</li>
+           <li><i class="bi bi-check-circle"></i>{{x.content}}</li>
+         
+        </ul>
+        
+
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+<!-- End About Section -->
+
+
+
+  </main><!-- End #main -->
+<br>
+
+{% endblock %}
